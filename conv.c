@@ -20,10 +20,11 @@ void k(float t){
     else
         printf("C=%.2f""\nF=%.2f",(t-273.15),((t-273.15)*1.8)+32,"\n");
 }
-int main(){
-float t;
+int main(int argc, char **argv){
+char t;
 char b;
-scanf("%f%c",&t,&b);
+t=*argv[1];
+b=*argv[2];
 switch(b) {
     case'C':
     case'c':
