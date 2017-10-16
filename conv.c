@@ -2,19 +2,19 @@
 #include <math.h>
 #include <stdlib.h>
 
-float c(float t){
+void c(float t){
     if (t<-273)
         printf("nedopustimoe zhach c");
     else
         printf("F=%.2f""\nK=%.2f",(t*1.8+32),t+273.15,"\n");
         }
-float f(float t){
+void f(float t){
     if (t<-454)
         printf("nedopustimoe zhach f");
     else
         printf("C=%.2f""\nK=%.2f",(t-32)/1.8,((t-32)/1.8)+273.15,"\n");
 }
-float k(float t){
+void k(float t){
     if (t<0)
         printf("nedopustimoe zhach k");
     else
