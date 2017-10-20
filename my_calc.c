@@ -1,23 +1,25 @@
 #include <stdlib.h>
 #include <stdio.h>
-int st[99];
+int st[100];
 int k=0;
 void test(char h){ /*oprazii dla calc*/
     if (h=='+'){
-        push(pop()+pop());}
+        float pop2=pop();
+        push(pop()+pop2);}
     if (h=='-'){
-        int pop2=pop();
+        float pop2=pop();
         push (pop()-pop2);}
     if (h=='/'){
-        int pop2=pop();
+        float pop2=pop();
         if (pop2!=0.0)
             push(pop() / pop2);
         else
             printf(" delit nelzya");}
     if (h=='*'){
-        push (pop()*pop());}
+        float pop2=pop();
+        push (pop()*pop2);}
 }
-void push(int x){ /*funkzia* push*/
+void push(float x){ /*funkzia* push*/
     if (k<=99){
         st[k]=x;
         k++;
@@ -27,10 +29,10 @@ void push(int x){ /*funkzia* push*/
     }
 
 }
-int pop() /*funkzia pop*/
+float pop() /*funkzia pop*/
 {
- return st[--k];
-
+    return st[--k];
+    stek[count]='\0';
 }
 
 int main()
