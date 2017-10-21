@@ -27,9 +27,9 @@ if (argc==1)
 else
 {
     t=atof(argv[1]);
-    printf("%c",t);
+    printf("%f",t);
     if (argc==3)
-        b=atof(argv[2]);
+        b=argv[2];
     else
         b=' ';
     switch(b) {
