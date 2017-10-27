@@ -1,6 +1,6 @@
 import random
 m,n=int,input().split()
-if m<4 and n<5:print('m i n ne ydovltvoriat ysloviu')
+if m<4 and n<5:print('not m<4 and n<5')
 else:
 #creating a random matrix
     a=[]
