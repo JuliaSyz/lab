@@ -1,5 +1,5 @@
 import random
-m,n=int,input().split()
+m,n=map(int,input().split())
 if m<4 and n<5:print('not m<4 and n<5')
 else:
 #creating a random matrix
