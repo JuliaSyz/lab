@@ -1,55 +1,39 @@
 #include <stdlib.h>
 #include <stdio.h>
-int st[100];
+float st[99];
 int k=0;
-void test(char h){ /*oprazii dla calc*/
-    if (h=='+'){
-        float pop2=pop();
-        push(pop()+pop2);}
-    if (h=='-'){
-        float pop2=pop();
-        push (pop()-pop2);}
-    if (h=='/'){
-        float pop2=pop();
-        if (pop2!=0.0)
-            push(pop() / pop2);
-        else
-            printf(" delit nelzya");}
-    if (h=='*'){
-        float pop2=pop();
-        push (pop()*pop2);}
+void push(float x){
+    st[k]=x;
+    k++;
 }
-void push(float x){ /*funkzia* push*/
-    if (k<=99){
-        st[k]=x;
-        k++;
-    }
-    else{
-        printf("stak full\n");
-    }
-
+float pop(){
+ return st[--k];
 }
-float pop() /*funkzia pop*/
-{
-    return st[--k];
-    stek[count]='\0';
-}
-
-int main()
-{
-    int x;
-    char h;
-    while ((x=getchar())!='='){
-        if (x>='0' && x<='9')
-            push(x-'0');
-
-        if (x=='+'||x=='-'||x=='/'||x=='*')
-        {
-            h=x;
-            test(h);
+int main(int argc, char* argv[]){
+    float x;
+    int i;
+    for (i=1; i<argc;i++){
+        if (argv[i][0]=='+'||argv[i][0]=='-'||argv[i][0]=='/'||argv[i][0]=='*'){
+            if (argv[i][0]=='+'){
+                push(pop()+pop());}
+            if (argv[i][0]=='-'){
+                int pop2=pop();
+                push (pop()-pop2);}
+            if (argv[i][0]=='/'){
+                int pop2=pop();
+                if (pop2!=0.0)
+                    push(pop()/pop2);
+                else
+                    printf("can not be dividedcan not be divided");}
+            if (argv[i][0]=='*'){
+                push (pop()*pop());}
         }
-    }
-    printf("%d",pop());
+        else{
+            x=atof(argv[i]);
+            push(x);
+        }
 
+    }
+    printf("%f",pop());
     return 0;
 }
