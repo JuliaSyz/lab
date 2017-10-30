@@ -13,7 +13,7 @@ int main(int argc, char* argv[]){
     float x;
     int i;
     for (i=1; i<argc;i++){
-        if (argv[i][0]=='+'||argv[i][0]=='-'||argv[i][0]=='/'||argv[i][0]=='*'){
+        if (argv[i][0]=='+'||argv[i][0]=='-'||argv[i][0]=='/'||argv[i][0]=='x'||argv[i][0]=='X'){
             if (argv[i][0]=='+'){
                 push(pop()+pop());}
             if (argv[i][0]=='-'){
