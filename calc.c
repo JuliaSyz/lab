@@ -25,7 +25,7 @@ int main(int argc, char* argv[]){
                     push(pop()/pop2);
                 else
                     printf("can not be dividedcan not be divided");}
-            if (argv[i][0]=='*'){
+            if (argv[i][0]=='x' || argv[i][0]=='X'){
                 push (pop()*pop());}
         }
         else{
