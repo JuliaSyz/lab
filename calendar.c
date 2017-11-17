@@ -79,11 +79,11 @@ int main(int argc, char* argv[])
                     if (f==1)
                     {
                         if (month<3){
-                            if (day==6)
-                                day=0;
+                            if (day==0)
+                                day=6;
                             else
 
-                                day++;
+                                day--;
                         }
                     }
 
