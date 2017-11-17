@@ -71,7 +71,7 @@ int main(int argc, char* argv[])
                         k_year=6;
                     else if (year/100%4==1)
                         k_year=4;
-                    else if (year/100%4==1)
+                    else if (year/100%4==2)
                         k_year=2;
                     k_year=(k_year+year%100+(year%100)/4)%7;
 
